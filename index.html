@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<h1>Task Manager Pro</h1>
+
+<nav>
+    <a href="index.html">Tasks</a>
+    <a href="report.html">Report</a>
+</nav>
+
+<div class="container">
+
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="New task..." required>
+        <select id="priorityInput">
+            <option value="Low">Low</option>
+            <option value="Normal" selected>Normal</option>
+            <option value="High">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <h2>Your Tasks</h2>
+    <ul id="taskList"></ul>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
