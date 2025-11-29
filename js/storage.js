@@ -1,5 +1,3 @@
-// LocalStorage utilities
-
 const loadTasks = () => {
     const data = localStorage.getItem("tasks");
     return data ? JSON.parse(data) : [];

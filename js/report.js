@@ -18,3 +18,4 @@ highPriority.forEach(t => {
     li.textContent = t.text;
     highList.appendChild(li);
 });
+

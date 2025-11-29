@@ -10,17 +10,14 @@ let tasks = loadTasks();
 // Render tasks
 function render() {
     taskList.innerHTML = "";
-
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
-
         li.className = task.completed ? "completed" : "";
         li.innerHTML = `
             ${task.text} <strong>[${task.priority}]</strong>
             <button onclick="toggleTask(${index})">Done</button>
             <button onclick="deleteTask(${index})">Delete</button>
         `;
-
         taskList.appendChild(li);
     });
 }
@@ -40,13 +37,11 @@ function deleteTask(index) {
 // Add task
 form.addEventListener("submit", e => {
     e.preventDefault();
-
     tasks.push({
         text: taskInput.value,
         priority: priorityInput.value,
         completed: false
     });
-
     saveTasks(tasks);
     taskInput.value = "";
     render();
